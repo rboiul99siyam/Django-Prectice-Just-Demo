@@ -34,3 +34,20 @@ def home (request):
         ]
     }
     return render(request,'home.html', d)
+
+def contact(reqeust):
+    d = {
+        'Student ' : [
+            {
+                'name' : 'Ab : rohim',
+                'roll' :1,
+                'address':'chandpur',
+            },
+            {
+                'name' : 'Ab : Korim',
+                'roll' :2,
+                'address':'chandpur,foridgong',
+            },
+        ]
+    }
+    return render(reqeust , 'contact.html' , d)

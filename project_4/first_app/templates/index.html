@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+    <!-- this navbar here now  -->
+{% block content %}
+
+    <h1> <a href="/">Home</a> </h1>
+    <h1> <a href="/first_app/index/">profile</a> </h1>
+
+    <h1>Welcome To index page now </h1>
+    <img src="{% static 'images/Porfolo pic.png' %}" alt="profile">
+
+
+    <table class="table container">
+        <thead>
+            <tr>
+                <th scope="col">UserId</th>
+                <th scope="col">Id</th>
+                <th scope="col">Title</th>
+                <th scope="col">body</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for i in data %}
+            <tr>
+                <th scope="row">{{i.userId}}</th>
+                <td>{{i.id}}</td>
+                <td>{{i.title}}</td>
+                <td>{{i.body}}</td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+{% endblock %}
